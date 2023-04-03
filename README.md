@@ -26,3 +26,5 @@ Set up for VSCode + Windows only, from: https://github.com/Whitebrim/VSCode-Play
 ## Attributions:
 - Forked from VSCode-PlaydateTemplate <br>
 	(https://github.com/Whitebrim/VSCode-PlaydateTemplate) by Whitebrim
+- HC Collision detection Library <br>
+    (https://github.com/vrld/HC) by Matthias Richter
