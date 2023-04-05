@@ -2,6 +2,7 @@
 import "CoreLibs/ui"
 import "CoreLibs/timer"
 
+import "GolfScene"
 import "Globals"
 --------------------------------------------------------------------------------
 
@@ -15,16 +16,19 @@ local function LoadGame()
 	gfx.setBackgroundColor(gfx.kColorBlack) -- default "clear flag" color
 
 	curGameState = GameState.menu
+	scene = GolfScene()
 end
 
 -- Handles game logic, called once per frame
 local function UpdateGame()
-
+	scene:update()
 end
 
 -- Handles all drawing, called once per frame
 local function DrawGame()
 	gfx.clear() -- clears the screen
+
+	scene:draw()
 end
 
 local function DrawDebug()

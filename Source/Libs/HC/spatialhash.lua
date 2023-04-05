@@ -19,6 +19,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ]]--
+--[[
+Edited by Scott King to work on playdate
+]]--
 
 local floor = math.floor
 local min, max = math.min, math.max
@@ -26,10 +29,10 @@ local min, max = math.min, math.max
 local _PACKAGE, common_local = (...):match("^(.+)%.[^%.]+"), common
 if not (type(common) == 'table' and common.class and common.instance) then
 	assert(common_class ~= false, 'No class commons specification available.')
-	require(_PACKAGE .. '.class')
+	import "Libs/HC/class"
 	common_local, common = common, common_local
 end
-local vector  = require(_PACKAGE .. '.vector-light')
+local vector  = import "Libs/HC/vector-light"
 
 local Spatialhash = {}
 function Spatialhash:init(cell_size)

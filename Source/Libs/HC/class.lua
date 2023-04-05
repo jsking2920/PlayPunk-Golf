@@ -24,6 +24,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ]]--
 
+--[[
+Edited by Scott King to work on playdate
+]]--
+
 local function __NULL__() end
 
 -- class "inheritance" by copying functions

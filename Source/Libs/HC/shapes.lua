@@ -23,17 +23,20 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ]]--
+--[[
+Edited by Scott King to work on playdate
+]]--
 
 local math_min, math_sqrt, math_huge = math.min, math.sqrt, math.huge
 
 local _PACKAGE, common_local = (...):match("^(.+)%.[^%.]+"), common
 if not (type(common) == 'table' and common.class and common.instance) then
 	assert(common_class ~= false, 'No class commons specification available.')
-	require(_PACKAGE .. '.class')
+	import "Libs/HC/class"
 end
-local vector  = require(_PACKAGE .. '.vector-light')
-local Polygon = require(_PACKAGE .. '.polygon')
-local GJK     = require(_PACKAGE .. '.gjk') -- actual collision detection
+local vector  = import "Libs/HC/vector-light"
+local Polygon = import "Libs/HC/polygon"
+local GJK     = import "Libs/HC/gjk" -- actual collision detection
 
 -- reset global table `common' (required by class commons)
 if common_local ~= common then

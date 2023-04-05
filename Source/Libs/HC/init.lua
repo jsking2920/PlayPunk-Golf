@@ -23,14 +23,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ]]--
+--[[
+Edited by Scott King to work on playdate
+]]--
 
 local _NAME, common_local = ..., common
 if not (type(common) == 'table' and common.class and common.instance) then
 	assert(common_class ~= false, 'No class commons specification available.')
-	require(_NAME .. '.class')
+	import "Libs/HC/class"
 end
-local Shapes      = require(_NAME .. '.shapes')
-local Spatialhash = require(_NAME .. '.spatialhash')
+local Shapes = import "Libs/HC/shapes"
+local Spatialhash = import "Libs/HC/spatialhash"
 
 -- reset global table `common' (required by class commons)
 if common_local ~= common then

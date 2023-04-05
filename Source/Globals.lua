@@ -15,6 +15,7 @@ GameState = {menu = 0, playing = 1}
 curGameState = GameState.menu
 
 -- Game Objects (created in main)
+golfScene = nil
 
 -- Global Sounds (keep scene specific sounds out of here to save memory)
 clickSound = snd.sampleplayer.new("Audio/SFX/click.wav")
